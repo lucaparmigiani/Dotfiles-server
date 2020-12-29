@@ -1,0 +1,42 @@
+snippet prin "print" i
+println!("{}", $1);
+endsnippet
+
+snippet print "print" i
+println!("{}", $1);
+endsnippet
+
+snippet strin "String" i
+String::from("$1")
+endsnippet
+
+snippet str "String" i
+String::new()
+endsnippet
+
+snippet fn "function"
+fn $1
+{
+}
+endsnippet
+
+snippet db "Debug"
+#[derive(Debug)]
+endsnippet
+#\-> println!("{:?}", struct); or {:#?} easier to read
+
+snippet vec "Debug" i
+: Vec<${1:T}> = Vec::new();
+endsnippet
+
+snippet main "main" w
+fn main() {
+}
+endsnippet
+
+###################
+#     LIBRARY     #
+###################
+snippet hash "hashmap" w
+use std::collections::HashMap;
+endsnippet

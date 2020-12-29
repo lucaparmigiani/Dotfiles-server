@@ -1,0 +1,100 @@
+snippet #!
+#!/bin/bash
+
+endsnippet
+
+snippet env "#!/usr/bin/env (!env)"
+#!/usr/bin/env bash 
+
+endsnippet
+
+#snippet temp "Tempfile"
+#${1:TMPFILE}="$(mktemp -t ${2:`!p
+#snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
+#`})"
+#${3:${4/(.+)/trap "/}${4:rm -f '$${1/.*\s//}'}${4/(.+)/" 0               # EXIT\n/}${5/(.+)/trap "/}${5:rm -f '$${1/.*\s//}'; exit 1}${5/(.+)/" 2       # INT\n/}${6/(.+)/trap "/}${6:rm -f '$${1/.*\s//}'; exit 1}${6/(.+)/" 1 15    # HUP TERM\n/}}
+#endsnippet
+
+snippet case "case .. esac (case)"
+case ${1:word} in
+	${2:pattern} )
+		$0;;
+esac
+endsnippet
+
+snippet elif "elif .. (elif)"
+elif ${2:[[ ${1:condition} ]]}; then
+	${0:#statements}
+endsnippet
+
+snippet for "for ... done (for)"
+for (( i = 0; i < ${1:10}; i++ )); do
+	${0:#statements}
+done
+endsnippet
+
+snippet else "ifelse" b
+if [ "foo" = "foo" ]; then
+	echo expression evaluated as true
+else
+	echo expression evaluated as false
+fi
+endsnippet
+
+snippet forin "for ... in ... done (forin)"
+for ${1:i}${2/.+/ in /}${2:words}; do
+	${0:#statements}
+done
+endsnippet
+
+snippet if "if ... then (if)"
+if ${2:[[ ${1:condition} ]]}; then
+	${0:#statements}
+fi
+endsnippet
+
+snippet until "until ... (done)"
+until ${2:[[ ${1:condition} ]]}; do
+	${0:#statements}
+done
+endsnippet
+
+snippet while "while ... (done)"
+while ${2:[[ ${1:condition} ]]}; do
+	${0:#statements}
+done
+endsnippet
+
+snippet fun
+function ${1:name}() {
+		$0
+}
+endsnippet
+
+snippet expfun 
+export -f ${0:namefun}
+endsnippet
+
+snippet date 
+$(date -u +"%Y%m%d.%H:%M:%S")
+endsnippet
+
+snippet arg
+if [ "$#" -ne 1 ]; then
+	echo "Illegal number of parameters"
+fi
+endsnippet
+
+snippet yesno "yes no default"
+echo -n "$1(Y/n)"
+read yn
+case $yn in
+	[yY] | "")
+		$2
+	;;
+	[nN] | *)
+		$3
+	;;
+esac
+endsnippet
+

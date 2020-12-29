@@ -1,0 +1,114 @@
+snippet main
+#include <iostream>
+
+int main()
+{
+	$0
+	return 0;
+}
+endsnippet
+
+#include
+snippet stringinc
+#include <string>
+endsnippet
+
+snippet string
+std::string $0
+endsnippet
+
+snippet cout
+std::cout << $0 << '\n';
+endsnippet
+
+snippet cin
+std::cin >> $0;
+endsnippet
+
+snippet ignore
+std::cin.ignore(32767, '\n');
+endsnippet
+
+snippet getline
+std::getline(std::cin, $0);
+endsnippet
+
+snippet switch
+switch (${1:x})
+{
+	case $2:
+		
+		break;
+	case $3:
+		
+		break;
+	case $4:
+		
+		break;
+	default:
+		
+		break;
+}
+endsnippet
+
+snippet if
+if ($1) {
+}
+endsnippet
+
+snippet while
+while ($1)
+{
+}
+endsnippet
+
+snippet for
+for (int $1 = ${2:0}; $1 < ${0:n}; ++$1) {
+}
+endsnippet
+
+snippet guard
+#ifndef $1_H79
+#define $1_H79
+
+namespace $2 {
+	$0
+}
+#endif
+endsnippet
+
+snippet read
+$1 read$2()
+{
+	$1 x{};
+	std::cout << "$3: ";
+	std::cin >> x;
+	return x;
+}
+endsnippet
+
+snippet oneif
+(($1 ${2:>} $3) ? ${4:True} : ${5:False})
+endsnippet
+
+snippet comp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define ar array
+
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int t;
+	int i=1;
+	cin >> t;
+	while(t--) {
+		cout << "Case " << i++ << ": ";
+		solve();
+	}
+}
+endsnippet

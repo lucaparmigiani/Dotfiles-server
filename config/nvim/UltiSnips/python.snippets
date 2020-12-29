@@ -1,0 +1,64 @@
+snippet fasta "fasta" i
+from Bio import SeqIO
+
+def read_fasta(filename):
+	fasta = []
+	for record in SeqIO.parse(filename, "fasta"):
+		#record.id, record.seq
+		fasta.append(str(record.seq))
+	return fasta
+
+filename = "$1"
+fasta = read_fasta(filename)
+endsnippet
+
+snippet base "base" i
+base = {'A':0, 'C':0, 'G':0, 'T':0}
+endsnippet
+
+snippet log "logging" i
+import logging
+
+FORMAT = "%(asctime)-15s %(message)s"
+logging.basicConfig(format=FORMAT,level=logging.INFO,datefmt='%Y-%m-%d %H:%M:%S', handlers=[logging.FileHandler("out.txt"),logging.StreamHandler()])
+
+logging.info("move {0},{1}".format(x, y))
+endsnippet
+
+snippet read "read file" i
+filename = './'
+with open(filename) as f:
+	for line in f.readlines():
+		line = line.strip()
+		line.split()
+endsnippet
+
+snippet alphabet "alphabet" i
+import string
+alphabet = list(string.ascii_lowercase)
+#pos = { i : 0 for i in alphabet }
+endsnippet
+
+snippet main "main" i
+def main():
+	print("Hello World!")
+
+if __name__ == "__main__":
+	main()
+endsnippet
+
+snippet binary "binary search"
+def bin_search(l, i, j, num):
+	L = i
+	R = j-1
+	K = (L + R) // 2
+	while L <= R:
+		if l[K] > num:
+			R = K - 1
+		elif l[K] < num:
+			L = K + 1
+		else:
+			return K
+		K = (L + R) // 2
+	return -1
+endsnippet
