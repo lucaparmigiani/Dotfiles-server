@@ -236,7 +236,7 @@ map <silent> <leader>bb :Buffers<CR>
 " map <silent> <leader>o :call fzf#run({'source': 'call UltiSnips#ListSnippets()', 'sink': 'e'})
 
 " (Ncm-R)
-   autocmd BufEnter * call ncm2#enable_for_buffer()
+"   autocmd BufEnter * call ncm2#enable_for_buffer()
 " inoremap <c-z> :call ncm2#enable_for_buffer()<cr>
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
@@ -327,12 +327,12 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 " PYTHON
 "pythonx import sys; 
 "
-let g:vim_virtualenv_path = '/home/luca/Lib/Python/py27'
-if exists('g:vim_virtualenv_path')
-    pythonx import os; import vim
-    pythonx activate_this = os.path.join(vim.eval('g:vim_virtualenv_path'), 'bin/activate_this.py')
-    pythonx with open(activate_this) as f: exec(f.read(), {'__file__': activate_this})
-endif
+"let g:vim_virtualenv_path = '/home/luca/Lib/Python/py27'
+"if exists('g:vim_virtualenv_path')
+"    pythonx import os; import vim
+"    pythonx activate_this = os.path.join(vim.eval('g:vim_virtualenv_path'), 'bin/activate_this.py')
+"    pythonx with open(activate_this) as f: exec(f.read(), {'__file__': activate_this})
+"endif
 "print(sys.version)
 " I don't use FTP for python because sometimes I want to write script
 " without extestion .py
