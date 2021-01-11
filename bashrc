@@ -1,3 +1,6 @@
+export TERM=xterm
+export LANG=en_US.UTF-8
+export LC_MESSAGES="C"
 #JuNest
 export PATH=~/.local/share/junest/bin:$PATH
 #--------------------------------------------------------------------------------
@@ -14,14 +17,6 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export MANPAGER='nvim +Man!'
 
-#SOFT
-#--------------------------------------------------------------------------------
-# Aesthetic config
-autoload -U colors && colors
-#PS1="$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[white]%}%~%{$fg[red]%}]%{$fg[gray]%}$%b "
-#PS1="%{$fg[magenta]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[cyan]%}%M%{$fg[magenta]%}]%} %b"
-#export PS1=$PS1
-#--------------------------------------------------------------------------------
 # GO
 #--------------------------------------------------------------------------------
 #export GOPATH=$HOME/Workspace/go
@@ -45,7 +40,6 @@ autoload -U colors && colors
 #================================================================================
 
 BIOPATH=$HOME/Bioinformatics/Soft
-
 BIOPATH=$HOME/Soft/bioinfo
 export PATH=$PATH:$BIOPATH/_shortcut
 HG38=/home/luca/Data/Bio/Hg38/hg38.fna
@@ -58,12 +52,6 @@ export BCFTOOLS_PLUGINS=/home/luca/Soft/bioinfo/bcftools/bcftools/plugins
 export PATH=/home/luca/Soft/bioinfo/hisat-genotype-top:/home/luca/Soft/bioinfo/hisat-genotype-top/hisatgenotype_scripts:$PATH
 export PYTHONPATH=/home/luca/Soft/bioinfo/hisat-genotype-top/hisatgenotype_modules:$PYTHONPATH
 #--------------------------------------------------------------------------------
-
-## NPM
-#[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-#source /usr/share/nvm/nvm.sh
-#source /usr/share/nvm/bash_completion
-#source /usr/share/nvm/install-nvm-exec
 
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/"

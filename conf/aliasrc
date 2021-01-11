@@ -6,7 +6,7 @@
 alias aal='nvim ~/Dotfiles/conf/aliasrc' 
 alias xcp='xclip -selection clipboard'
 alias cpwd="pwd | sed 's| |\\\ |g' | xclip -selection clipboard " 
-alias so='source ~/.zshrc'
+alias so='source ~/.bashrc'
 # Edit
 alias v=nvim
 alias vimdiff='nvim -d'
