@@ -41,7 +41,7 @@ else
 fi
 endsnippet
 
-snippet forin "for ... in ... done (forin)"
+snippet foreach "for ... in ... done (forin)"
 for ${1:i}${2/.+/ in /}${2:words}; do
 	${0:#statements}
 done

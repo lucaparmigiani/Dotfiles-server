@@ -20,9 +20,10 @@ Plug 'rbgrouleff/bclose.vim' " For closing buffer (dependencies of ranger)
 "Plug 'tpope/vim-fugitive'
 
 " * Completition
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
-"Plug 'roxma/nvim-yarp'
-"Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
 
 " * R
 "Plug 'jalvesaq/Nvim-R'
@@ -386,6 +387,11 @@ augroup END
 " (R)
 augroup R 
     autocmd BufReadPre,FileReadPre *.R set ft=R
+augroup END
+" (Snakemake)
+augroup snakemake
+    autocmd BufNewFile,BufRead Snakefile set syntax=snakemake
+    autocmd BufNewFile,BufRead *.snake,*.smk set syntax=snakemake
 augroup END
 " (Dot)
 augroup R 

@@ -1,6 +1,7 @@
 export TERM=xterm
 export LANG=en_US.UTF-8
 export LC_MESSAGES="C"
+export PATH=~/Tools/bin:$PATH
 #JuNest
 export PATH=~/.local/share/junest/bin:$PATH
 #--------------------------------------------------------------------------------
@@ -59,6 +60,8 @@ export PYTHONPATH=/home/luca/Soft/bioinfo/hisat-genotype-top/hisatgenotype_modul
 #    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
 #        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+PS1="\n\[\033[1;34m\]\342\226\210\342\226\210 \u @ $SERVER_NAME""$BBlue"" \w""$Color_Off  \n\[\033[0;36m\]\342\226\210\342\226\210 \d \t $ \[\033[0;39m\]"
+
 if [ "$TERM" = "xterm" ] || [ "$TERM" = "xterm-256color" ]
 then
     export TERM=xterm-256color
@@ -71,3 +74,4 @@ fi
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/Dotfiles/conf/aliasrc ] && . ~/Dotfiles/conf/aliasrc
+. "$HOME/.cargo/env"
